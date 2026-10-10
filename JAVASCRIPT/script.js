@@ -1,8 +1,8 @@
 const majorEl = document.getElementById("typing-major");
 const facultyEl = document.getElementById("typing-faculty");
 
-const majorText = "สาขาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์";
-const facultyText = "คณะวิศวกรรมศาสตร์และเทคโนโลยี";
+const majorText = "คณะวิศวกรรมศาสตร์และเทคโนโลยี";
+const facultyText = "สาขาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์";
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*<>";
 
 function renderColor(str, splitIdx) {
@@ -37,9 +37,9 @@ async function startLoop() {
         majorEl.innerHTML = "";
         facultyEl.innerHTML = "";
         await new Promise(r => setTimeout(r, 500));
-        await typeAndScramble(majorEl, majorText, 4);
+        await typeAndScramble(majorEl, majorText, 3);
         await new Promise(r => setTimeout(r, 300));
-        await typeAndScramble(facultyEl, facultyText, 3);
+        await typeAndScramble(facultyEl, facultyText, 4);
         await new Promise(r => setTimeout(r, 4000));
     }
 }
