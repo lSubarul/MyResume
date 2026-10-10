@@ -1,70 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
-</head>
+    <title>My Resume</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/styles.css">
+
+</head>
 <body>
-    <div style="display: flex; gap: 20px; align-items: center;">
-        <img src="img/1.jpg" alt="" style="width: 15%; height: 15%; object-fit: cover;">
-    
-    <div>
-        <h1>
-            Hello World
-        </h1>
-        <p>
-            สวัดดีครับ ผมชื่อ นายเทพซ่า  ศูนย์ศูนญ์เจ็ด
-        </p>
-        <p>
-            มีชื่อเล่นว่า ไม้กระดาน
-        </p>
-        <p>
-            สาขาวิศวกรรมคอมพิวเตอร์และปํญญญาประดิษฐ์
-        </p>
-        <p>
-            กลุ่มเรียน 1.2-1 วันจันทร์ เช้า
-        </p>
-        <a href="contact.html">Contact Me</a>
-        <a href="https://www.pim.ac.th/">PIM</a>
+
+    <canvas id="neural-canvas"></canvas>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Resume</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#profile">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">เกี่ยวกับ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">การศึกษา</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">ทักษะ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">ช่องทางติดต่อ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container mt-5">
+
+   <div id="profile" class="row align-items-center mb-5">
+            <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+                <img src="img/Profile.jpg" alt="Profile Image" class="profile-img">
+            </div>
+            
+           <div class="col-12 col-md-8">
+                <h1 class="display-5 fw-bold">นายฤทธิไกร ขวัญจ่า</h1>
+
+                <p class="text-secondary mb-2 mt-3 fs-4">
+                    <em><span id="typing-major"></span></em>
+                </p>
+
+                <p class="mb-2 fs-5 text-dark fw-medium">
+                    <span id="typing-faculty"></span>
+                </p>
+
+                <p class="mb-0 fs-5 mt-3">ขณะนี้ กำลังศึกษาอยู่ที่ <a href="https://www.pim.ac.th/" target="_blank" class="text-decoration-none fw-semibold">สถาบันการจัดการปัญญาภิวัฒน์</a></p>  
+            </div>
+            
+        </div>
+
+        <hr>
+
+        <div id="about" class="mb-5">
+            <h2 class="mb-4 fw-bold">เกี่ยวกับตัวฉัน (About)</h2>
+            <div class="card shadow-sm border-0 rounded-4">
+                <div class="card-body p-4 p-md-5">
+                    <p class="fs-5 lh-lg text-secondary mb-0">
+                        นายฤทธิไกร ขวัญจ่า หรือที่รู้จักกันในหมู่เพื่อนๆ ว่า <strong class="text-info">"บอส"</strong> เป็นนักศึกษาของสถาบันการจัดการปัญญาภิวัฒน์ (PIM) 
+                        กำลังศึกษาในคณะวิศวกรรมศาสตร์และเทคโนโลยี ในสาขาวิชาคอมพิวเตอร์และปัญญาประดิษฐ์ 
+                        ปัจจุบันยังไม่เคยมีประสบการณ์ทำงานในด้านนี้มาก่อน <strong class="text-primary">แต่ผมนั้นพร้อมที่จะเรียนรู้อยู่เสมอ</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div id="education" class="mb-5">
+            <h2 class="mb-4">การศึกษา (Education)</h2>
+            
+            <div class="row g-4">
+                <div class="col-12 col-lg-6">
+                    <div class="card shadow-sm h-100 border-0 rounded-4">
+                        <div class="card-body p-4">
+                            <div class="bg-primary text-white px-3 py-1 rounded d-inline-block mb-3 fs-6 fw-semibold">
+                                2025 - 2026
+                            </div>
+                            
+                            <h3 class="fs-4 fw-bold mb-2">
+                                ปริญญาตรี [B.Eng.] 
+                                <span class="d-block fs-5 fw-normal text-muted mt-1">Computer Engineering and Artificial Intelligence</span>
+                            </h3>
+                            
+                            <hr class="my-3 text-secondary">
+                            
+                            <p class="mb-0 fs-5 fw-semibold text-primary">
+                                <i class="bi bi-building me-2"></i> สถาบันการจัดการปัญญาภิวัฒน์
+                            </p>
+                            <p class="text-muted small mb-0">(Panyapiwat Institute of Management)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div class="card shadow-sm h-100 border-0 rounded-4">
+                        <div class="card-body p-4">
+                            <div class="bg-primary text-white px-3 py-1 rounded d-inline-block mb-3 fs-6 fw-semibold">
+                                2022 - 2025
+                            </div>
+                            
+                            <h3 class="fs-4 fw-bold mb-2">
+                                มัธยมศึกษา 
+                                <span class="d-block fs-5 fw-normal text-muted mt-1">สายศิลป์คอมพิวเตอร์</span>
+                            </h3>
+                            
+                            <hr class="my-3 text-secondary">
+                            
+                            <p class="mb-0 fs-5 fw-semibold text-primary">
+                                <i class="bi bi-building me-2"></i> รัตนโกสินทร์สมโภชบวรนิเวศ ศาลายา
+                            </p>
+                            <p class="text-muted small mb-0">(Rattanakosinsomphot Bowonniwet Salaya School)</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    <hr>
+
+    <div id="skills" class="container mt-4">
+        <h2>ทักษะความสามารถ (Skills)</h2>
+        
+        <div class="row">
+            
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="card p-3 text-center shadow-sm">
+                    <h3>Frontend</h3>
+                    <p>HTML, CSS, JavaScript, Bootstrap</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="card p-3 text-center shadow-sm">
+                    <h3>Backend</h3>
+                    <p>Python, Nodejs, PostgreSQL</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="card p-3 text-center shadow-sm">
+                    <h3>Network</h3>
+                    <p>Cisco Packet Tracer, Wireshark</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="card p-3 text-center shadow-sm">
+                    <h3>Tools</h3>
+                    <p>VS Code, Github</p>
+                </div>
+            </div>
+
         </div>
     </div>
-        
-        <hr style="border: 1px solid black;">
 
-    <div>
+    <hr>
 
-        <h3 style = "text-align: justify;">
-            เหตุผลที่อยากเรียน Full stack web development
-        </h3> 
-        <p>
-            อยากรู้วิธีการทำงาน ทั้ง Front-end และ Back-end ของเว็บไซต์ และอยากทำเว็บไซต์เป็นของตัวเองได้
-        </p>
-        
-        <h3 style = "text-align: justify;">
-            ความคาดหวังของวิชานี้
-        </h3>
-        <p>
-            อยากได้ความรู้ที่เอาไปใช้ได้จริงเลยๆ โดยเฉพาะเรื่องหลังบ้าน ว่าเป็นยังไง ทำยังไง สร้างขึ้นมาได้ยังไง
-        </p>
+    <div id="contact" class="mb-5">
+        <h2>ช่องทางติดต่อ (Contact)</h2>
+            <div class="card shadow-sm border-0 mt-3">
+            <div class="card-body">
+                    <ul class="list-unstyled fs-5 lh-lg mb-0">
+                        <li class="mb-2">
+                            <i class="bi bi-envelope-fill text-danger me-2"></i>
+                            <strong>Email:</strong> 
+                            68400xxxx<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'><text x='0' y='18' font-family='Arial' font-size='22'>@</text></svg>" alt="at" class="at-symbol" style="width: 16px; vertical-align: middle; margin: 0 2px;">pim.ac.th
+                        </li>
+                        
+                        <li class="mb-2">
+                            <i class="bi bi-telephone-fill text-success me-2"></i>
+                            <strong>Phone:</strong> 080-361-XXXX
+                        </li>
+                        
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                            <strong>Address:</strong> ถนนแจ้งวัฒนะ ตำบลคลองเกลือ อำเภอปากเกร็ด จังหวัดนนทบุรี 11120
+                        </li>
+                        
+                        <li class="mb-2">
+                            <i class="bi bi-github  me-2"></i>
+                            <strong>GitHub:</strong> <a href="https://github.com/lSubarul" target="_blank" class="text-decoration-none">https://github.com/lSubarul</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-        <h3 style = "text-align: justify;">
-            จุดอ่อน ที่ตนเองต้องพัฒนาเกี่ยวกับทักษะ Programming และ แนวทางการพัฒนา
-        </h3>
-        <p>
-            จุดอ่อนของผมคือ การเขียนโปรแกรมจำไม่ได้ว่าภาษาอะไรทำงานยังไงบ้าง และแนวทางการพัฒนาคือ การฝึกเขียนโปรแกรมบ่อยๆ และหัดทำโปรเจคเล็กๆ เพื่อให้จำได้
-        </p>
-    </div>
+
+</div>
+
     
-    <div>
-        <h2>
-        <a href="https://www.youtube.com/@9arm." style="display: block; margin: 20px 0; text-align: center;">สิ่งที่ทำให้ผมได้รับแรงบันดาลใจ</a>
-        </h2>
-        <img src="img/3.png" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; margin: auto;">
-        <a href="#" style="display: block; margin: 20px 0; text-align: center;">กลับขึ้นไปข้างบน</a>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JAVASCRIPT/script.js"></script>
 </body>
-    
 </html>
+
