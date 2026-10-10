@@ -1,0 +1,115 @@
+body {
+    background-color: #0f1115 !important; 
+    color: #c9d1d9 !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+.card {
+    background-color: #161b22 !important;
+    border: 1px solid #30363d !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #58a6ff !important;
+    box-shadow: 0 8px 20px rgba(88, 166, 255, 0.2) !important;
+}
+
+hr {
+    border-color: #21262d !important;
+    opacity: 1 !important;
+}
+
+.bg-primary {
+    background-color: #1f6feb !important;
+}
+.bg-secondary {
+    background-color: #8957e5 !important;
+}
+
+h1, h2, h3 {
+    color: #f0f6fc !important; 
+}
+
+.text-secondary, 
+.text-muted {
+    color: #8b949e !important; 
+}
+
+.text-primary, 
+.text-info, 
+a {
+    color: #58a6ff !important; 
+}
+a:hover {
+    color: #79c0ff !important;
+}
+
+.prefix-color {
+    color: #66c1fd !important; 
+    text-shadow: 0 0 8px rgba(5, 184, 255, 0.438);
+}
+
+.main-color {
+    color: #ffffff !important; 
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0);
+}
+
+.cursor {
+    color: #ffffff !important;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    outline: 3px solid #0004ff;
+    transition: all 0.4s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 15px 30px rgba(25, 135, 84, 0.3);
+    outline-color: #0d6efd;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+.at-symbol {
+    filter: invert(100%) sepia(5%) saturate(746%) hue-rotate(189deg) brightness(114%) contrast(87%);
+}
+
+#neural-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    background: transparent;
+}
+
+.navbar {
+    background-color: #161b22 !important; 
+    border-bottom: 1px solid #30363d;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #e6edf3 !important;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+    color: #58a6ff !important;
+}
