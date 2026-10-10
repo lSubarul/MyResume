@@ -50,7 +50,7 @@ const canvas = document.getElementById('neural-canvas');
 const ctx = canvas.getContext('2d');
 
 let particles = [];
-let maxParticles = 80;
+let maxParticles = window.innerWidth < 768 ? 25 : 80;
 
 function resizeCanvas() {
     canvas.width = window.innerWidth;
@@ -102,7 +102,7 @@ function initParticles() {
 initParticles();
 
 function connectParticles() {
-    const maxDistance = 120;
+    const maxDistance = window.innerWidth < 768 ? 75 : 120;
     for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
             const dx = particles[i].x - particles[j].x;
@@ -110,7 +110,7 @@ function connectParticles() {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < maxDistance) {
-                const opacity = (1 - (distance / maxDistance)) * 1.5;
+                const opacity = (1 - (distance / maxDistance)) * 0.15;
                 ctx.beginPath();
                 ctx.moveTo(particles[i].x, particles[i].y);
                 ctx.lineTo(particles[j].x, particles[j].y);
