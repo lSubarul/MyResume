@@ -110,7 +110,7 @@ function connectParticles() {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < maxDistance) {
-                const opacity = (1 - (distance / maxDistance)) * 0.15;
+                const opacity = (1 - (distance / maxDistance)) * 1;
                 ctx.beginPath();
                 ctx.moveTo(particles[i].x, particles[i].y);
                 ctx.lineTo(particles[j].x, particles[j].y);
