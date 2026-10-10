@@ -51,26 +51,11 @@ const ctx = canvas.getContext('2d');
 
 let particles = [];
 let maxParticles = 80;
-let maxDistance = 120;
-
-function setupResponsiveEffect() {
-    if (window.innerWidth < 768) { 
-        maxParticles = 25;
-        maxDistance = 75;
-    } else {
-        maxParticles = 80; 
-        maxDistance = 120;
-    }
-}
 
 function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    setupResponsiveEffect();
-    initParticles();
 }
-
-setupResponsiveEffect();
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
@@ -117,13 +102,15 @@ function initParticles() {
 initParticles();
 
 function connectParticles() {
+    const maxDistance = 120;
     for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
             const dx = particles[i].x - particles[j].x;
             const dy = particles[i].y - particles[j].y;
             const distance = Math.sqrt(dx * dx + dy * dy);
+
             if (distance < maxDistance) {
-                const opacity = (1 - (distance / maxDistance)) * 0.15;
+                const opacity = (1 - (distance / maxDistance)) * 1.5;
                 ctx.beginPath();
                 ctx.moveTo(particles[i].x, particles[i].y);
                 ctx.lineTo(particles[j].x, particles[j].y);
